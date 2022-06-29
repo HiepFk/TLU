@@ -1,0 +1,42 @@
+{% extends "layouts/base.html" %} {% block title %} Check Object {% endblock %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %} {% block content %}
+
+<div class="card">
+  <div class="card-body text-center">
+    <h3 class="mb-4">Nhận diện đồ vật basic</h3>
+
+    <nav class="navbar navbar-light bg-light">
+      <form
+        method="POST"
+        action="/preview"
+        enctype="multipart/form-data"
+        class="form-inline"
+      >
+        <input
+          type="file"
+          name="file"
+          class="btn btn-outline-success my-2 my-sm-0"
+        />
+        <input
+          type="submit"
+          value="Submit"
+          name="Submit"
+          class="btn btn-outline-success my-2 my-sm-0"
+        />
+      </form>
+    </nav>
+
+    {% if url %}
+    <div>
+      <img src="{{ url }}" alt="{{ url }}" style="width: 800px" />
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

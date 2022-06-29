@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Control.Admin_CT">
+  <tabs>
+    <Tab text="Quản lý sinh viên ">
+      <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" onDragDetected="#Add" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="table1" layoutX="19.0" layoutY="22.0" prefHeight="396.0" prefWidth="535.0">
+                    <columns>
+                      <TableColumn fx:id="idColumn" prefWidth="91.2000093460083" text="ID" />
+                      <TableColumn fx:id="nameSvColumn" prefWidth="141.59994506835938" text="Họ và tên " />
+                        <TableColumn fx:id="passColumn" prefWidth="142.3999786376953" text="Mật khẩu " />
+                        <TableColumn fx:id="classColumn" prefWidth="105.60003662109375" text="Lớp" />
+                        <TableColumn fx:id="gpaCoulm" prefWidth="51.999987792968795" text="GPA" />
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="iDtext" layoutX="577.0" layoutY="29.0" promptText="Enter ID" />
+                  <TextField fx:id="nameText" layoutX="577.0" layoutY="69.0" promptText="Enter Name" />
+                  <Text layoutX="182.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Danh sách sinh viên" />
+                  <TextField fx:id="searchSv" layoutX="577.0" layoutY="309.0" promptText="Name or ID   " />
+                  <Button layoutX="590.0" layoutY="183.0" mnemonicParsing="false" onAction="#Add" text="Add" />
+                  <Button layoutX="670.0" layoutY="233.0" mnemonicParsing="false" onAction="#Delete" text="Delete" />
+                  <Button layoutX="670.0" layoutY="183.0" mnemonicParsing="false" onAction="#Edit" text="Update" />
+                  <Button layoutX="653.0" layoutY="364.0" mnemonicParsing="false" onAction="#Logout" text="Log out" />
+                  <TextField fx:id="passText" layoutX="577.0" layoutY="109.0" promptText="Enter Pass" />
+                  <Text layoutX="577.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tìm Kiếm sinh viên " />
+                  <Button layoutX="590.0" layoutY="233.0" mnemonicParsing="false" onAction="#Detail" text="Detail" />
+                  <TextField fx:id="lopText" layoutX="577.0" layoutY="150.0" promptText="Enter Class" />
+               </children>
+            </AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Quản lý môn học ">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="435.0" prefWidth="745.0">
+               <children>
+                  <TableView fx:id="table2" layoutX="26.0" layoutY="23.0" prefHeight="404.0" prefWidth="443.0">
+                    <columns>
+                      <TableColumn fx:id="maMhColumn" prefWidth="118.39999008178711" text="Mã môn học " />
+                      <TableColumn fx:id="tenMhColumn" prefWidth="220.00001525878906" text="Tên môn học " />
+                        <TableColumn fx:id="tinChiColumn" prefWidth="103.19999999999999" text="Tín chỉ " />
+                    </columns>
+                  </TableView>
+                  <Text layoutX="181.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Danh sách môn học " />
+                  <TextField fx:id="idMhText" layoutX="522.0" layoutY="74.0" promptText="Enter ID" />
+                  <TextField fx:id="tenMhText" layoutX="522.0" layoutY="128.0" promptText="Enter Name" />
+                  <TextField fx:id="tinChiText" layoutX="522.0" layoutY="178.0" promptText="Enter Credits" />
+                  <Button layoutX="522.0" layoutY="232.0" mnemonicParsing="false" onAction="#AddMh" text="Add" />
+                  <Button layoutX="677.0" layoutY="232.0" mnemonicParsing="false" onAction="#EditMh" text="Update" />
+                  <Button layoutX="598.0" layoutY="232.0" mnemonicParsing="false" onAction="#DeleteMh" text="Delete" />
+                  <Button layoutX="658.0" layoutY="364.0" mnemonicParsing="false" onAction="#Logout" text="Log out " />
+                  <TextField fx:id="searchMh" layoutX="527.0" layoutY="326.0" prefHeight="26.0" prefWidth="196.0" promptText="Name or ID" />
+                  <Text layoutX="527.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tìm kiếm môn học" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Quản lý User">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="table3" layoutX="27.0" layoutY="36.0" prefHeight="389.0" prefWidth="452.0">
+                    <columns>
+                      <TableColumn fx:id="idUserColumn" prefWidth="126.39999008178711" text="Id  User" />
+                      <TableColumn fx:id="nameUserColumn" prefWidth="186.40003967285156" text="Name User" />
+                        <TableColumn fx:id="passUserColumn" prefWidth="142.39996337890625" text="Pass" />
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="idUserText" layoutX="549.0" layoutY="76.0" prefHeight="26.0" prefWidth="166.0" promptText="Enter ID" />
+                  <TextField fx:id="nameUserText" layoutX="551.0" layoutY="140.0" prefHeight="26.0" prefWidth="162.0" promptText="Enter Name" />
+                  <TextField fx:id="passUserText" layoutX="549.0" layoutY="192.0" prefHeight="26.0" prefWidth="161.0" promptText="Enter Pass" />
+                  <Button layoutX="554.0" layoutY="248.0" mnemonicParsing="false" onAction="#add_User" text="Add" />
+                  <Button layoutX="641.0" layoutY="248.0" mnemonicParsing="false" onAction="#delete_User" text="Delete" />
+                  <Button layoutX="604.0" layoutY="301.0" mnemonicParsing="false" onAction="#edit_User" text="Update" />
+                  <Button layoutX="671.0" layoutY="358.0" mnemonicParsing="false" onAction="#Logout" text="Log out" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>

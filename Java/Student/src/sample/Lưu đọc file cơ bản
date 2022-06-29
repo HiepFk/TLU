@@ -1,0 +1,116 @@
+// Lưu File
+    public void Luu_File() throws IOException {
+        //Sinh Viên
+        File fp = new File("D:\\Pro_SinhVien.txt");
+        FileWriter fwp = new FileWriter(fp);
+        for (SinhVien sinhVien : tb_Sv) {
+            fwp.write(sinhVien.getId_Sv());
+            fwp.write("\n");
+            fwp.write(sinhVien.getName_Sv());
+            fwp.write("\n");
+            fwp.write(sinhVien.getMk());
+            fwp.write("\n");
+        }
+        fwp.close();
+
+
+        // Môn Học
+        File fkh = new File("D:\\Pro_MonHoc.txt");
+        FileWriter fwkh = new FileWriter(fkh);
+        for (MonHoc monHoc : tb_Mh) {
+            fwkh.write(monHoc.getId_Mh());
+            fwkh.write("\n");
+            fwkh.write(monHoc.getName_Mh());
+            fwkh.write("\n");
+            fwkh.write(monHoc.getTinChi());
+            fwkh.write("\n");
+        }
+        fwkh.close();
+
+        // Sinh viên + môn học chưa đk
+        File fdm = new File("D:\\Pro.txt");
+        FileWriter fdmm = new FileWriter(fdm);
+        for(SinhVien sv : tb_Sv) {
+            fdmm.write(sv.getId_Sv());
+            fdmm.write("\n");
+            fdmm.write(sv.getName_Sv());
+            fdmm.write("\n");
+            fdmm.write(sv.getMk());
+            fdmm.write("\n");
+            for (MonHoc monHoc : tb_Mh) {
+                fdmm.write(monHoc.getId_Mh());
+                fdmm.write("\n");
+                fdmm.write(monHoc.getName_Mh());
+                fdmm.write("\n");
+                fdmm.write(monHoc.getTinChi());
+                fdmm.write("\n");
+            }
+        }
+        fdmm.close();
+
+    }
+
+
+// Đọc file
+    public void Doc_File() throws IOException {
+        // Sinh Viên
+        File fsv = new File("D:\\Pro_SinhVien.txt");
+        FileReader frsv = new FileReader(fsv);
+        BufferedReader bufferedReaderSV = new BufferedReader(frsv);
+
+        int i =1;
+        String line;
+        SinhVien addSVNew = new SinhVien("NONE","NONE","NONE");
+        while ((line = bufferedReaderSV.readLine()) != null){
+            if(i==1)
+            {
+                addSVNew.setId_Sv(line);
+                i++;
+            }
+            else if(i==2)
+            {
+                addSVNew.setName_Sv(line);
+                i++;
+            }
+            else if(i==3)
+            {
+                addSVNew.setMk(line);
+                tb_Sv.add(new SinhVien(addSVNew.getId_Sv(), addSVNew.getName_Sv(),addSVNew.getMk()));
+                i=1;
+            }
+
+        }
+        frsv.close();
+        bufferedReaderSV.close();
+
+
+        // Môn học
+        File fmh = new File("D:\\Pro_MonHoc.txt");
+        FileReader frmh = new FileReader(fmh);
+        BufferedReader bufferedReaderMH = new BufferedReader(frmh);
+
+        int j =1;
+        String lime = "";
+        MonHoc adMHNew = new MonHoc("NONE","NONE","NONE");
+        while ((lime = bufferedReaderMH.readLine()) != null){
+            if(j==1)
+            {
+                adMHNew.setId_Mh(lime);
+                j++;
+            }
+            else if(j==2)
+            {
+                adMHNew.setName_Mh(lime);
+                j++;
+            }
+            else if(j==3)
+            {
+                adMHNew.setTinChi(lime);
+                tb_Mh.add(new MonHoc(adMHNew.getId_Mh(),adMHNew.getName_Mh(),adMHNew.getTinChi()));
+                j=1;
+            }
+
+        }
+        frmh.close();
+        bufferedReaderMH.close();
+    }

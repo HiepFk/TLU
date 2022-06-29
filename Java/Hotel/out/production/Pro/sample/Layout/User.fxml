@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="694.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Control.Admin_User_CT">
+   <children>
+      <TableView fx:id="table3" layoutX="14.0" layoutY="49.0" prefHeight="342.0" prefWidth="295.0">
+        <columns>
+          <TableColumn fx:id="IdColumn" prefWidth="89.60000610351562" text="ID Phòng" />
+          <TableColumn fx:id="typeColumn" prefWidth="92.80001831054688" text="Loại phòng" />
+            <TableColumn fx:id="statusColumn" prefWidth="112.79998779296875" text="Tình trạng" />
+        </columns>
+      </TableView>
+      <Text layoutX="558.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Họ và tên" wrappingWidth="83.58304786682129" />
+      <Text layoutX="559.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã khách hàng" />
+      <Button layoutX="556.0" layoutY="240.0" mnemonicParsing="false" onAction="#dk" prefHeight="26.0" prefWidth="119.0" text="Đăng kí phòng" />
+      <Button layoutX="563.0" layoutY="347.0" mnemonicParsing="false" onAction="#back" prefHeight="26.0" prefWidth="110.0" text="Trở lại " />
+      <Text layoutX="272.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin cá nhân" />
+      <Text fx:id="name" layoutX="558.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="83.58304786682129" />
+      <Text fx:id="id" layoutX="555.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="90.703125" />
+      <TableView fx:id="table4" layoutX="343.0" layoutY="49.0" prefHeight="341.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="idEd" prefWidth="88.79998779296875" text="ID Phòng" />
+          <TableColumn fx:id="typeEd" prefWidth="108.0" text="Loại Phòng" />
+        </columns>
+      </TableView>
+      <Text layoutX="66.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Danh sách các phòng trống" />
+      <Text layoutX="395.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phòng đã đăng kí " />
+      <Button layoutX="558.0" layoutY="291.0" mnemonicParsing="false" onAction="#huy" prefHeight="26.0" prefWidth="119.0" text="Giả phòng" />
+   </children>
+</AnchorPane>

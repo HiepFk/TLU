@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Control">
+   <children>
+      <Text layoutX="310.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TÍNH THUẾ THU NHẬP CÁ NHÂN " />
+      <Text layoutX="24.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TỔNG THU NHẬP THUẾ" />
+      <Text layoutX="411.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SỐ TIỀN PHẢI NỘP  " />
+      <Text layoutX="22.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SỐ NGƯỜI PHỤ THUỘC " />
+      <TextField fx:id="tienText" layoutX="181.0" layoutY="65.0" prefHeight="26.0" prefWidth="210.0" promptText="đơn vị ĐỒNG" />
+      <TextField fx:id="nguoiText" layoutX="171.0" layoutY="141.0" prefHeight="26.0" prefWidth="66.0" />
+      <Button layoutX="65.0" layoutY="176.0" mnemonicParsing="false" onAction="#Tinh" text="Tính " />
+      <Button layoutX="173.0" layoutY="176.0" mnemonicParsing="false" onAction="#Reset" text="Reset" />
+      <Accordion />
+      <Text fx:id="thueText" layoutX="535.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="218.4156494140625" />
+      <TableView fx:id="Bang" layoutX="26.0" layoutY="228.0" prefHeight="210.0" prefWidth="370.0">
+        <columns>
+          <TableColumn fx:id="bacColumn" prefWidth="52.79998779296875" text="Bậc " />
+          <TableColumn fx:id="thuNhapColumn" prefWidth="214.4000244140625" text="Thu nhập /triệu đồng " />
+            <TableColumn fx:id="thueSuatColumn" prefWidth="101.5999755859375" text="Thuế suất " />
+        </columns>
+      </TableView>
+      <Text layoutX="98.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bảng thu nhập tính thuế và thuế suất" />
+      <ListView fx:id="bangPro" layoutX="411.0" layoutY="131.0" prefHeight="308.0" prefWidth="408.0" />
+      <Text layoutX="413.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cách tính " wrappingWidth="79.39801025390625" />
+      <RadioButton fx:id="nam" layoutX="26.0" layoutY="112.0" mnemonicParsing="false" onAction="#setToggle" text="Tháng" />
+      <RadioButton fx:id="nu" layoutX="123.0" layoutY="112.0" mnemonicParsing="false" onAction="#setToggle" text="Năm" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="545.0"
+         prefWidth="949.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/15.0.1"
+         xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainClient">
+    <tabs>
+        <Tab text="Quản lý sinh viên ">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" onDragDetected="#Add" prefHeight="487.0" prefWidth="950.0">
+                    <children>
+                        <TableView fx:id="table" layoutX="2.0" layoutY="86.0" prefHeight="414.0" prefWidth="762.0">
+                            <columns>
+                                <TableColumn fx:id="idColumn" prefWidth="56.80001902580261" text="ID"/>
+                                <TableColumn fx:id="nameColumn" prefWidth="131.19997787475586" text="Họ và tên "/>
+                                <TableColumn fx:id="sexColumn" prefWidth="78.40000915527344" text="Giới tính "/>
+                                <TableColumn fx:id="nsColumn" prefWidth="95.199951171875" text="Ngày sinh"/>
+                                <TableColumn fx:id="lopCoulm" prefWidth="62.4000244140625" text="Lớp"/>
+                                <TableColumn fx:id="dtColumn" prefWidth="105.5999755859375" text="Số điện thoại"/>
+                                <TableColumn fx:id="emailColumn" prefWidth="168.0" text="Email"/>
+                                <TableColumn fx:id="diemColumn" prefWidth="68.79998779296875" text="Điểm TB"/>
+                            </columns>
+                        </TableView>
+                        <TextField fx:id="iDtext" layoutX="780.0" layoutY="134.0" promptText="ID"/>
+                        <TextField fx:id="nameText" layoutX="780.0" layoutY="174.0" promptText="Name"/>
+                        <Text layoutX="358.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="Danh sách sinh viên" wrappingWidth="122.3948974609375"/>
+                        <TextField fx:id="searchSv" layoutX="14.0" layoutY="21.0" prefHeight="26.0" prefWidth="443.0"
+                                   promptText="Name or ID   "/>
+                        <Button fx:id="add" layoutX="772.0" layoutY="474.0" mnemonicParsing="false" onAction="#Add"
+                                text="Add"/>
+                        <Button fx:id="delete" layoutX="829.0" layoutY="474.0" mnemonicParsing="false"
+                                onAction="#Delete" text="Delete"/>
+                        <Button fx:id="update" layoutX="886.0" layoutY="474.0" mnemonicParsing="false" onAction="#Edit"
+                                text="Update"/>
+                        <Button layoutX="845.0" layoutY="92.0" mnemonicParsing="false" onAction="#Dis" prefHeight="26.0"
+                                prefWidth="82.0" text="Disconnect"/>
+                        <TextField fx:id="nsText" layoutX="780.0" layoutY="258.0" prefHeight="26.0" prefWidth="148.0"
+                                   promptText="Ngày sinh"/>
+                        <TextField fx:id="sexText" layoutX="780.0" layoutY="212.0" promptText="Sex"/>
+                        <TextField fx:id="lopText" layoutX="780.0" layoutY="300.0" promptText="Lớp"/>
+                        <TextField fx:id="dtText" layoutX="780.0" layoutY="340.0" promptText="Số điện thoại"/>
+                        <TextField fx:id="emailText" layoutX="780.0" layoutY="381.0" promptText="Email"/>
+                        <TextField fx:id="diemText" layoutX="780.0" layoutY="427.0" promptText="Điểm TB"/>
+                        <TextField fx:id="loctext" layoutX="583.0" layoutY="21.0" prefHeight="26.0" prefWidth="137.0"/>
+                        <Button layoutX="497.0" layoutY="21.0" mnemonicParsing="false" onAction="#Loc"
+                                text="Lọc điểm "/>
+                        <TextField fx:id="host_text" layoutX="772.0" layoutY="21.0" promptText="Host"/>
+                        <TextField fx:id="port_text" layoutX="772.0" layoutY="57.0" promptText="Port"/>
+                        <Button layoutX="772.0" layoutY="93.0" mnemonicParsing="false" onAction="#Connect"
+                                text="Connect"/>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>

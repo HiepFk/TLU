@@ -1,0 +1,25 @@
+* Tạo drigram : 
+ALTER AUTHORIZATION ON DATABASE::Tên database TO sa
+
+
+1. Sắp xếp 
+ORDER BY tên-cột ASC, ... xếp tăng dần, mặc định.
+ORDER BY tên-cột DESC, ... xếp giảm dần.
+
+2. Tạo bảng
+use master 
+go
+if exists (select * from sys.databases where name ='Tên bảng')
+	drop database Tên bảng 
+go
+create database Tên bảng
+go
+use Tên bảng
+go
+
+3.Quan hệ 
+1-n : constraint FK_Con_Bố foreign key(thuộc tính)
+	references  Bố(thuộc tính),
+n-n : constraint PK_Con primary key(Thuộc tính có thể nhiều),
+      constraint FK_Con_Bố foreign key(Thuộc tính)
+                 references Bố(Thuộc tính),

@@ -1,0 +1,20 @@
+.button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  transition: all 0.25s linear;
+  background-color: #ccc;
+  border-radius: 6px;
+}
+.button:hover {
+  background-color: #ff6f61;
+  color: white;
+  /* color: rgb(149, 255, 255); */
+}
+
+.pointer {
+  cursor: pointer;
+}
+.name {
+  font-size: 2rem;
+}

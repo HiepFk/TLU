@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Control.SinhVien_CT">
+   <children>
+      <TableView fx:id="table3" layoutX="14.0" layoutY="49.0" prefHeight="350.0" prefWidth="300.0">
+        <columns>
+          <TableColumn fx:id="idMon_ed" prefWidth="67.20001220703125" text="Mã môn " />
+          <TableColumn fx:id="nameMon_ed" prefWidth="97.5999755859375" text="Tên môn " />
+            <TableColumn fx:id="diemMon_ed" prefWidth="61.60003662109375" text="Điểm " />
+            <TableColumn fx:id="tinChi_ed" minWidth="0.0" prefWidth="73.5999755859375" text="Tín chỉ " />
+        </columns>
+      </TableView>
+      <Text layoutX="590.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Họ và tên" />
+      <Text layoutX="580.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã Sinh viên" />
+      <Button layoutX="570.0" layoutY="263.0" mnemonicParsing="false" onAction="#Dk" text="Đăng kí môn " />
+      <Button layoutX="701.0" layoutY="263.0" mnemonicParsing="false" onAction="#HuyMon" text="Hủy môn " />
+      <Button layoutX="705.0" layoutY="340.0" mnemonicParsing="false" onAction="#Logout_ed" text="Log out " />
+      <Text layoutX="336.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin sinh viên " />
+      <Text layoutX="605.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GPA" />
+      <Text layoutX="572.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng số tín chỉ " />
+      <Text fx:id="nameSv_text" layoutX="667.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="83.58304786682129" />
+      <Text fx:id="idSv_text" layoutX="667.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="90.703125" />
+      <Text fx:id="gpa_text" layoutX="663.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="90.703125" />
+      <Text fx:id="tinChi_text" layoutX="667.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="90.703125" />
+      <TableView fx:id="table4" layoutX="343.0" layoutY="49.0" prefHeight="350.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="idMon" prefWidth="64.0" text="Mã môn " />
+          <TableColumn fx:id="nameMon" prefWidth="81.5999755859375" text="Tên môn " />
+            <TableColumn fx:id="tinChi" prefWidth="56.00006103515625" text="Tín chỉ" />
+        </columns>
+      </TableView>
+      <Text layoutX="127.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bảng điểm " />
+      <Text layoutX="394.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Môn chưa đăng kí " />
+   </children>
+</AnchorPane>

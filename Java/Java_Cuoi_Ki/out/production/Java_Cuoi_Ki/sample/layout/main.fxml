@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+      <tabs>
+         <Tab text="Quản lý Sinh viên">
+            <content>
+               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="322.0" prefWidth="600.0">
+                  <children>
+                     <ListView fx:id="listViewSV" layoutX="14.0" layoutY="53.0" prefHeight="290.0" prefWidth="430.0" />
+                     <Button fx:id="btn_addSV" layoutX="459.0" layoutY="318.0" mnemonicParsing="false" onAction="#btn_addSVClick" prefHeight="25.0" prefWidth="137.0" text="THÊM/SỬA SINH VIÊN" textAlignment="CENTER" />
+                     <Label layoutX="462.0" layoutY="201.0" text="Mã Sinh Viên" />
+                     <TextField id="info_msv" fx:id="info_msv" layoutX="459.0" layoutY="218.0" onAction="#btn_addSVClick" prefHeight="25.0" prefWidth="120.0" />
+                     <Label layoutX="460.0" layoutY="260.0" text="Tên Sinh Viên" />
+                     <TextField id="info_tsv" fx:id="info_tsv" layoutX="459.0" layoutY="277.0" onAction="#btn_addSVClick" prefHeight="25.0" prefWidth="120.0" />
+                     <Label layoutX="177.0" layoutY="36.0" text="Danh sách sinh viên" />
+                     <Button fx:id="btn_Nhap" layoutX="481.0" layoutY="71.0" mnemonicParsing="false" onAction="#btn_NhapClick" text="Đọc file" />
+                     <Button fx:id="btn_Xuat" layoutX="484.0" layoutY="124.0" mnemonicParsing="false" onAction="#btn_XuatClick" text="Lưu file" />
+                  </children>
+               </AnchorPane>
+            </content>
+         </Tab>
+         <Tab text="Quản lý Môn học">
+            <content>
+               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="371.0" prefWidth="614.0">
+                  <children>
+                     <ListView fx:id="listViewMH" layoutX="14.0" layoutY="53.0" prefHeight="290.0" prefWidth="430.0" />
+                     <Button fx:id="btn_addMH" layoutX="456.0" layoutY="318.0" mnemonicParsing="false" onAction="#btn_addMHClick" prefHeight="25.0" prefWidth="137.0" text="THÊM/SỬA MÔN HỌC" textAlignment="CENTER" />
+                     <Label layoutX="455.0" layoutY="202.0" text="Mã Môn học" />
+                     <TextField id="info_mmh" fx:id="info_mmh" layoutX="455.0" layoutY="219.0" onAction="#btn_addMHClick" prefHeight="25.0" prefWidth="123.0" />
+                     <Label layoutX="456.0" layoutY="260.0" text="Tên Môn học" />
+                     <TextField id="info_tmh" fx:id="info_tmh" layoutX="456.0" layoutY="277.0" onAction="#btn_addMHClick" prefHeight="25.0" prefWidth="120.0" />
+                     <Label layoutX="176.0" layoutY="36.0" text="Danh sách môn học" />
+                  </children>
+               </AnchorPane>
+            </content>
+         </Tab>
+         <Tab text="Đăng ký học">
+            <content>
+               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="322.0" prefWidth="600.0">
+                  <children>
+                     <ListView fx:id="listViewDSSV" layoutX="14.0" layoutY="54.0" prefHeight="275.0" prefWidth="220.0" />
+                     <ListView fx:id="listViewDSMH" layoutX="242.0" layoutY="53.0" prefHeight="290.0" prefWidth="220.0" />
+                     <Button fx:id="btn_DKHoc" layoutX="463.0" layoutY="318.0" mnemonicParsing="false" onAction="#btn_DKHocClick" prefHeight="25.0" prefWidth="131.0" text="Đăng ký học" textAlignment="CENTER" />
+                     <Button fx:id="btn_NhapDiem" layoutX="508.0" layoutY="257.0" mnemonicParsing="false" onAction="#btn_NhapDiemClick" prefHeight="25.0" prefWidth="85.0" text="Nhập điểm" textAlignment="CENTER" />
+                     <TextField id="info_diem" fx:id="info_diem" layoutX="462.0" layoutY="257.0" onAction="#btn_NhapDiemClick" prefHeight="25.0" prefWidth="41.0" />
+                     <Button fx:id="btn_LocSV" layoutX="509.0" layoutY="53.0" mnemonicParsing="false" onAction="#btn_LocSVClick" prefHeight="25.0" prefWidth="85.0" text="Lọc điểm" textAlignment="CENTER" />
+                     <TextField id="info_diemtb" fx:id="info_diemtb" layoutX="463.0" layoutY="53.0" onAction="#btn_LocSVClick" prefHeight="25.0" prefWidth="41.0" />
+                     <Label layoutX="100.0" layoutY="36.0" text="Sinh viên" />
+                     <Label layoutX="328.0" layoutY="36.0" text="Môn học" />
+                  </children>
+               </AnchorPane>
+            </content>
+         </Tab>
+      </tabs>
+   </TabPane>
+</AnchorPane>

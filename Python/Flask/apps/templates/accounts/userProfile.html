@@ -1,0 +1,32 @@
+{% extends "layouts/base-fullscreen.html" %} {% block title %} UserProfile {%
+endblock %} {% block stylesheets %}{% endblock stylesheets %} {% block content
+%}
+
+<div class="auth-wrapper">
+  <div class="auth-content">
+    <div class="auth-bg">
+      <span class="r"></span>
+      <span class="r s"></span>
+      <span class="r s"></span>
+      <span class="r"></span>
+    </div>
+    <div class="card">
+      <div class="card-body text-center">
+        <div class="mb-4">
+          <i class="feather icon-user auth-icon"></i>
+        </div>
+        <h3 class="mb-4">UserProfile</h3>
+
+        <h4 class="auth-bg">Name : {{user.username}}</h4>
+        <h4 class="auth-bg">Email : {{user.email}}</h4>
+        <h4 class="auth-bg">{{user.photo}}</h4>
+        <h4 class="auth-bg">Role : {{user.role}}</h4>
+
+        <br />
+        <br />
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

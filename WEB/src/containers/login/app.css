@@ -1,0 +1,27 @@
+@keyframes logo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.Wrapper {
+  background: url(../../asset/images/1.jpg) repeat scroll center center / cover;
+}
+.PopupLoginWrapper {
+  background-color: rgb(255, 255, 255, 0.7);
+}
+
+.Button:hover {
+  background-color: #3986df;
+  color: white;
+}
+.Logo {
+  /* background: url(../../asset/images/logo.png) repeat scroll center center /
+    cover; */
+  width: 10rem;
+  height: 10rem;
+  letter-spacing: 1;
+  animation: logo infinite 10s linear;
+}

@@ -1,0 +1,128 @@
+15
+1
+hiep hoc truong gi 
+Dai hoc Fly Dragon
+Dai hoc Thai Binh
+Bo hoc
+BK aptech
+0
+1
+2
+Lao to hay Viet Nam to hon?
+Lao
+Viet Nam
+Bang Nhau
+Khong biet
+1
+2
+3
+Dai hoc Thang long o dau
+Hoang Hoa Tham
+Ha Dong
+Hoang Mai Ha Noi
+My
+2
+4
+4
+Hiep thay nganh It nay the nao
+De
+Chiu
+Binh thuong
+kho
+3
+8
+5
+Dieu Hiep muon 
+love
+crush
+money
+Thay cho diem cao du chua lam gi
+3
+16
+6
+Que son tung o dau
+Thai Binh
+ha long
+ha noi
+Hcm
+0
+32
+7
+Bai hat Hiep thich
+Getlong
+Dusk tll dawn
+Run
+Em di dau
+1
+64
+8
+Rapper Hiep thich
+B ray 
+Den
+khoi
+tao
+2
+128
+9
+Phim hiep thich nhat
+GOT
+Get out
+Us
+Midsommar
+3
+256
+10
+Dieu Hiep ko thich
+het tien
+diem kem
+hoc lai
+tat ca
+3
+512
+11
+Bay h la thang may
+1
+3
+2
+4
+1
+1024
+12
+Bay h nam bao nhieu
+2017
+2018
+2019
+2020
+3
+2048
+13
+bay h la the ki bao nhieu
+20
+22
+19
+21
+3
+4096
+14
+Chan qua phai lam j 
+Di net
+Ngu
+hoc
+di choi
+1
+8192
+15
+Lam sao de hoc gioi
+hoc
+choi
+ngu
+an
+0
+
+
+
+
+
+
+
+
